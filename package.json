@@ -1,7 +1,7 @@
 {
-  "name": "react-native-htmltext",
+  "name": "react-native-html-textfield",
   "version": "0.1.2",
-  "description": "富文本",
+  "description": "html text field",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,9 @@
     "url": "git+https://github.com/WangZiXiao-ChenDu/react-native-htmltext.git"
   },
   "keywords": [
-    "react-native-component"
+    "react-native-component",
+    "html",
+    "text field"
   ],
   "author": "WangZiXiao",
   "license": "ISC",
