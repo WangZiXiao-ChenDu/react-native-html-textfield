@@ -1,6 +1,6 @@
 {
   "name": "react-native-htmltext",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "富文本",
   "main": "index.js",
   "scripts": {
