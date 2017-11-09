@@ -5,6 +5,7 @@ var entities = require('./vendor/entities')
 
 var {
   Text,
+  View,
 } = ReactNative
 
 
