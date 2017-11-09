@@ -36,6 +36,22 @@ function htmlToElement(rawHtml, opts, done) {
           linkPressHandler = () => opts.linkHandler(entities.decodeHTML(node.attribs.href))
         }
 
+        if (node.name == 'sup') {
+          var width = node.children[0].data.length * 8;
+          var supStyle = {
+            flexDirection: 'row',
+            alignItems: 'flex-start',
+            width: width,
+            height: 28,
+          };
+
+          return (
+            <View key={index} style={supStyle}>
+              <Text allowFontScaling={false}>{domToElement(node.children, node)}</Text>
+            </View>
+          );
+        }
+
         return (
           <Text allowFontScaling={false} key={index} onPress={linkPressHandler}>
             {node.name == 'pre' ? LINE_BREAK : null}
