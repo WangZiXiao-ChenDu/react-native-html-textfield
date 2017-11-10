@@ -6,9 +6,10 @@ var entities = require('./vendor/entities')
 var {
   Text,
   View,
+  Platform
 } = ReactNative
 
-
+var LINE_HEIGHT = 28
 var LINE_BREAK = '\n'
 var PARAGRAPH_BREAK = '\n\n'
 var BULLET = '\u2022 '
@@ -37,13 +38,13 @@ function htmlToElement(rawHtml, opts, done) {
           linkPressHandler = () => opts.linkHandler(entities.decodeHTML(node.attribs.href))
         }
 
-        if (node.name == 'sup') {
+        if (node.name == 'sup' && Platform.OS === 'ios') {
           var width = node.children[0].data.length * 8;
           var supStyle = {
             flexDirection: 'row',
             alignItems: 'flex-start',
-            width: width,
-            height: 28,
+            height: LINE_HEIGHT,
+            width,
           };
 
           return (
